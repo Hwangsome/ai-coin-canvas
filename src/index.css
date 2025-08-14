@@ -2,39 +2,80 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Crypto Trading Platform Design System - HSL Colors Only */
 
 @layer base {
   :root {
+    /* Brand Colors */
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 225 15% 20%;
 
+    /* Card System */
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 225 15% 20%;
+    --card-hover: 220 14% 96%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 225 15% 20%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary Brand Blue */
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 217 91% 55%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Success Green */
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+    --success-light: 142 69% 92%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Warning Orange */
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+    --warning-light: 48 89% 95%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Destructive Red */
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --destructive-light: 0 93% 94%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* Secondary */
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 225 15% 20%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* Muted */
+    --muted: 220 14% 96%;
+    --muted-foreground: 215 13% 50%;
+
+    /* Accent */
+    --accent: 220 14% 96%;
+    --accent-foreground: 225 15% 20%;
+
+    /* Borders and Inputs */
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 217 91% 60%;
+
+    /* Trading Specific */
+    --chart-grid: 220 13% 93%;
+    --chart-background: 0 0% 100%;
+    --buy-color: 142 76% 36%;
+    --sell-color: 0 72% 51%;
+
+    /* AI Assistant */
+    --ai-message: 0 0% 100%;
+    --user-message: 217 91% 60%;
+    --system-message: 220 14% 96%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(217 91% 45%) 100%);
+    --gradient-success: linear-gradient(135deg, hsl(142 76% 36%) 0%, hsl(142 76% 30%) 100%);
+    --gradient-card: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(220 14% 98%) 100%);
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(220 13% 50% / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(220 13% 50% / 0.1), 0 2px 4px -1px hsl(220 13% 50% / 0.06);
+    --shadow-lg: 0 10px 15px -3px hsl(220 13% 50% / 0.1), 0 4px 6px -2px hsl(220 13% 50% / 0.05);
+    --shadow-hover: 0 20px 25px -5px hsl(220 13% 50% / 0.1), 0 10px 10px -5px hsl(220 13% 50% / 0.04);
 
     --radius: 0.5rem;
 
@@ -56,41 +97,161 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    /* Brand Colors */
+    --background: 225 15% 8%;
+    --foreground: 220 14% 95%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    /* Card System */
+    --card: 225 15% 12%;
+    --card-foreground: 220 14% 95%;
+    --card-hover: 225 15% 15%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 225 15% 12%;
+    --popover-foreground: 220 14% 95%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    /* Primary Brand Blue */
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 217 91% 65%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    /* Success Green */
+    --success: 142 76% 40%;
+    --success-foreground: 0 0% 100%;
+    --success-light: 142 69% 15%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    /* Warning Orange */
+    --warning: 38 92% 55%;
+    --warning-foreground: 0 0% 100%;
+    --warning-light: 48 89% 15%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    /* Destructive Red */
+    --destructive: 0 72% 55%;
+    --destructive-foreground: 0 0% 100%;
+    --destructive-light: 0 93% 15%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    /* Secondary */
+    --secondary: 225 15% 18%;
+    --secondary-foreground: 220 14% 95%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
+    /* Muted */
+    --muted: 225 15% 18%;
+    --muted-foreground: 215 13% 60%;
+
+    /* Accent */
+    --accent: 225 15% 18%;
+    --accent-foreground: 220 14% 95%;
+
+    /* Borders and Inputs */
+    --border: 225 15% 20%;
+    --input: 225 15% 20%;
+    --ring: 217 91% 60%;
+
+    /* Trading Specific */
+    --chart-grid: 225 15% 15%;
+    --chart-background: 225 15% 12%;
+    --buy-color: 142 76% 40%;
+    --sell-color: 0 72% 55%;
+
+    /* AI Assistant */
+    --ai-message: 225 15% 15%;
+    --user-message: 217 91% 60%;
+    --system-message: 225 15% 18%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(217 91% 50%) 100%);
+    --gradient-success: linear-gradient(135deg, hsl(142 76% 40%) 0%, hsl(142 76% 35%) 100%);
+    --gradient-card: linear-gradient(135deg, hsl(225 15% 12%) 0%, hsl(225 15% 15%) 100%);
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.1);
+    --shadow-md: 0 4px 6px -1px hsl(0 0% 0% / 0.15), 0 2px 4px -1px hsl(0 0% 0% / 0.1);
+    --shadow-lg: 0 10px 15px -3px hsl(0 0% 0% / 0.2), 0 4px 6px -2px hsl(0 0% 0% / 0.1);
+    --shadow-hover: 0 20px 25px -5px hsl(0 0% 0% / 0.25), 0 10px 10px -5px hsl(0 0% 0% / 0.1);
+
+    --sidebar-background: 225 15% 10%;
+    --sidebar-foreground: 220 14% 95%;
+    --sidebar-primary: 217 91% 60%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-accent: 225 15% 15%;
+    --sidebar-accent-foreground: 220 14% 95%;
+    --sidebar-border: 225 15% 20%;
+    --sidebar-ring: 217 91% 60%;
+  }
+}
+
+/* Crypto Platform Components */
+@layer components {
+  /* Trading Button Variants */
+  .btn-buy {
+    @apply bg-success hover:bg-success/90 text-success-foreground font-medium px-4 py-2 rounded-lg transition-all duration-200;
+  }
+  
+  .btn-sell {
+    @apply bg-destructive hover:bg-destructive/90 text-destructive-foreground font-medium px-4 py-2 rounded-lg transition-all duration-200;
+  }
+  
+  .btn-trade {
+    @apply bg-primary hover:bg-primary-hover text-primary-foreground font-medium px-6 py-2.5 rounded-lg transition-all duration-200 shadow-sm hover:shadow-md;
+  }
+
+  /* AI Chat Bubbles */
+  .chat-bubble-user {
+    @apply bg-user-message text-primary-foreground rounded-2xl rounded-br-md px-4 py-3 max-w-xs ml-auto shadow-sm;
+  }
+  
+  .chat-bubble-ai {
+    @apply bg-ai-message text-foreground border border-border rounded-2xl rounded-bl-md px-4 py-3 max-w-md shadow-sm;
+  }
+  
+  .chat-bubble-system {
+    @apply bg-system-message text-muted-foreground rounded-lg px-3 py-2 text-sm text-center mx-8;
+  }
+
+  /* Trading Cards */
+  .trading-card {
+    @apply bg-card border border-border rounded-lg p-6 shadow-sm hover:shadow-md transition-all duration-200 hover:bg-card-hover;
+  }
+  
+  .price-positive {
+    @apply text-success font-semibold;
+  }
+  
+  .price-negative {
+    @apply text-destructive font-semibold;
+  }
+  
+  .price-neutral {
+    @apply text-muted-foreground font-semibold;
+  }
+
+  /* Status Indicators */
+  .status-online {
+    @apply w-2 h-2 bg-success rounded-full animate-pulse;
+  }
+  
+  .status-processing {
+    @apply w-2 h-2 bg-warning rounded-full animate-pulse;
+  }
+  
+  .status-error {
+    @apply w-2 h-2 bg-destructive rounded-full animate-pulse;
+  }
+
+  /* Micro-interactions */
+  .hover-lift {
+    @apply transition-all duration-200 hover:scale-[1.02] hover:-translate-y-0.5 hover:shadow-lg;
+  }
+  
+  .click-scale {
+    @apply active:scale-95 transition-transform duration-100;
+  }
+  
+  .fade-in {
+    @apply animate-fade-in;
+  }
+  
+  .slide-up {
+    @apply animate-slide-up;
   }
 }
 
